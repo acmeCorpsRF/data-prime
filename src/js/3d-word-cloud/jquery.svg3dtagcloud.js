@@ -185,8 +185,8 @@ THE SOFTWARE.
             let entry = {};
             if (typeof entryObj.label != 'undefined') {
                 entry.dot = document.createElementNS(svgNS, 'rect');
-                entry.dot.setAttribute('width', 7);
-                entry.dot.setAttribute('height', 7);
+                entry.dot.setAttribute('width', 5);
+                entry.dot.setAttribute('height', 5);
                 entry.dot.setAttribute('stroke', '#000000');
                 entry.dot.setAttribute('fill', '#ffffff');
                 entry.dot.setAttribute('stroke-width', 1);
