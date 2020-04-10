@@ -1,0 +1,88 @@
+.sphere {
+  width: 500px;
+  height: 500px;
+
+  .settings {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+
+    & > div {
+      margin-top: 10px;
+    }
+
+    &__input {
+      width: 50px;
+      margin-right: 10px;
+      margin-left: 10px;
+      padding: 5px;
+      border: 1px solid #000000;
+      border-radius: 5px;
+    }
+
+    &__button {
+      width: 27px;
+      height: 27px;
+      margin-right: 10px;
+      background-color: #ffffff;
+      border: 1px solid #000000;
+      border-radius: 5px;
+
+      &:hover {
+        color: #ffffff;
+        background-color: lighten(#000000, 50%);
+      }
+
+    }
+
+  }
+
+  &.version2 {
+
+    .users {
+      transform: translate(50%, 50%);
+    }
+
+  }
+
+  .users {
+    position: relative;
+    height: inherit;
+
+    &__point {
+      position: absolute;
+
+      &-dot {
+        display: block;
+        width: 7px;
+        height: 7px;
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        border-radius: 50%;
+      }
+
+      &-link {
+        position: absolute;
+        left: 10px;
+        top: -35px;
+        padding: 5px 10px;
+        color: #000000;
+        white-space: nowrap;
+        text-decoration: none;
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        border-radius: 25px;
+        display: none;
+
+        &.visibility {
+          display: inline-block;
+        }
+
+      }
+
+    }
+
+  }
+
+}
