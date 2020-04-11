@@ -27,8 +27,8 @@ class Sphere extends Component {
 
     componentDidUpdate() {
         const {entries} = this.props;
-        const settings = {
-            entries: entries,
+        const settingsUsersOne = {
+            entries: (!entries.length) ? [{}] : entries,
             width: 600,
             height: 600,
             radius: '50%',
@@ -47,10 +47,10 @@ class Sphere extends Component {
             hover: true,
             click: false
         };
-        if(svg3DTagCloud) {
+        if (svg3DTagCloud) {
             svg3DTagCloud.destroy();
         }
-        svg3DTagCloud = new SVG3DTagCloud(document.getElementById('users'), settings);
+        svg3DTagCloud = new SVG3DTagCloud(document.getElementById('users1'), settingsUsersOne);
     }
 
     componentDidMount() {
@@ -97,7 +97,7 @@ class Sphere extends Component {
                         </button>
                     </div>
                 </div>
-                <div className="users" id="users"></div>
+                <div className="users" id="users1"></div>
             </div>
         )
     }
